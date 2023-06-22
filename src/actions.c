@@ -55,7 +55,7 @@ void	ft_eat(t_philo *philo)
 	ft_stampa_pd(philo, "ha preso la sua forchetta 🍴");
 	ft_stampa_pd(philo, "ha preso la forchetta di un altro 🍴");
 	(*philo).burpo += 1;
-	ft_stampa_pd(philo, "sta mangiando!🍝 Non rompetegli il cazzo!");
+	ft_stampa_pd(philo, "sta mangiando!🍝");
 	usleep((*philo).data->time_mangia * 1000);
 	pthread_mutex_lock(&philo->data->lastmeal);
 	philo->last_meal = ft_get_time_now();
@@ -68,7 +68,7 @@ void	ft_sleep(t_philo *philo)
 {
 	if (check_morte(philo->data) == 1)
 		return ;
-	ft_stampa_pd(philo, "sta dormendo! 💤  Non rompetegli il cazzo!");
+	ft_stampa_pd(philo, "sta dormendo! 💤");
 	usleep((*philo).data->time_dormi * 1000);
 }
 
